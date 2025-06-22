@@ -10,14 +10,19 @@ RENTER_FILE = "renters.csv"
 
 # Ensure files exist with correct headers
 if not os.path.exists(PROPERTY_FILE):
-pd.DataFrame(columns=[
-'Property Name', 'Renter Name', 'Contact Info', 'Lease Amount',
-'Lease Start Date', 'Expected Rent Day', 'Increase Type', 'Increase Value'
-]).to_csv(PROPERTY_FILE, index=False)
+    pd.DataFrame(columns=[
+        'Property Name', 'Renter Name', 'Contact Info', 'Lease Amount',
+        'Lease Start Date', 'Expected Rent Day', 'Increase Type', 'Increase Value'
+    ]).to_csv(PROPERTY_FILE, index=False)
 
 if not os.path.exists(RENT_FILE):
-pd.DataFrame(columns=[
-'Property Name', 'Date Received', 'Amount', 'Payment Mode', 'Month', 'Year'
+    pd.DataFrame(columns=[
+        'Property Name', 'Date Received', 'Amount', 'Payment Mode', 'Month', 'Year'
+    ]).to_csv(RENT_FILE, index=False)
+
+if not os.path.exists(RENTER_FILE):
+    pd.DataFrame(columns=['Renter Name', 'Contact Info']).to_csv(RENTER_FILE, index=False)
+
 ]).to_csv(RENT_FILE, index=False)
 
 if not os.path.exists(RENTER_FILE):
