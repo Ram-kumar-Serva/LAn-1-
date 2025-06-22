@@ -24,7 +24,6 @@ if not os.path.exists(RENT_FILE):
 if not os.path.exists(RENTER_FILE):
     pd.DataFrame(columns=['Renter Name', 'Contact Info']).to_csv(RENTER_FILE, index=False)
 
-
 if not os.path.exists(RENTER_FILE):
 pd.DataFrame(columns=['Renter Name', 'Contact Info']).to_csv(RENTER_FILE, index=False)
 
